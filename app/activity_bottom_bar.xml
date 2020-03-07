@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BottomBarActivity"
+    android:background="@color/white_active">
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+    <com.gauravk.bubblenavigation.BubbleNavigationLinearView
+        android:id="@+id/bottom_navigation_view_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/l_item_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_active="true"
+            app:bt_colorActive="@color/white_active"
+            app:bt_colorInactive="@color/grey_inactive"
+            app:bt_icon="@drawable/ic_home_black_24dp"
+            app:bt_shape="@drawable/bg_cornerform_red"
+            app:bt_title="Home" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/l_item_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="@color/white_active"
+            app:bt_colorInactive="@color/grey_inactive"
+            app:bt_icon="@drawable/ic_search"
+            app:bt_shape="@drawable/bg_cornerform_red"
+            app:bt_title="Search" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/l_item_profile_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="@color/white_active"
+            app:bt_colorInactive="@color/grey_inactive"
+            app:bt_icon="@drawable/ic_map"
+            app:bt_shape="@drawable/bg_cornerform_red"
+            app:bt_title="QR" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/l_item_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="@color/white_active"
+            app:bt_colorInactive="@color/grey_inactive"
+            app:bt_icon="@drawable/ic_assignment"
+            app:bt_shape="@drawable/bg_cornerform_red"
+            app:bt_title="Notifications" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/l_item_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="@color/white_active"
+            app:bt_colorInactive="@color/grey_inactive"
+            app:bt_icon="@drawable/ic_account"
+            app:bt_shape="@drawable/bg_cornerform_red"
+            app:bt_title="Profile" />
+    </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
